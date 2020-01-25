@@ -11,16 +11,15 @@ import configureStore from "./store/configureStore";
 import getVisibleExpenses from "./selectors/expenses";
 
 import "./styles/styles.scss";
+import "react-dates/initialize";
 
 const store = configureStore();
 
-store.dispatch(addExpense({ amount: 100, description: "Water bill" }));
-store.dispatch(addExpense({ amount: 300, description: "Gas bill" }));
-store.dispatch(setTextFilter("gas"));
-
-setTimeout(() => {
-	store.dispatch(setTextFilter("bill"));
-}, 3000);
+store.dispatch(
+	addExpense({ amount: 5400, createdAt: 100, description: "Water bill" })
+);
+store.dispatch(addExpense({ amount: 19500, description: "Rent" }));
+store.dispatch(addExpense({ amount: 1000, description: "Gas bill" }));
 
 const state = store.getState();
 console.log(getVisibleExpenses(state.expenses, state.filters));
