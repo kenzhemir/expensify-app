@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render add expense page correctly 1`] = `
+exports[`should render edit expense page correctly 1`] = `
 <div>
   <ExpenseForm
     expense={

@@ -19,7 +19,7 @@ beforeEach(() => {
 	);
 });
 
-test("should render add expense page correctly", () => {
+test("should render edit expense page correctly", () => {
 	expect(wrapper).toMatchSnapshot();
 });
 
