@@ -7,7 +7,8 @@
 	"scripts": {
 		"serve": "live-server public/",
 		"build": "webpack --watch",
-		"dev-server": "webpack-dev-server"
+		"dev-server": "webpack-dev-server",
+		"test": "jest"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.8.3",
@@ -16,6 +17,7 @@
 		"@babel/preset-env": "^7.8.3",
 		"@babel/preset-react": "^7.8.3",
 		"babel-loader": "^8.0.6",
+		"jest": "^25.1.0",
 		"live-server": "^1.2.1",
 		"webpack": "^4.41.5",
 		"webpack-cli": "^3.3.10"
