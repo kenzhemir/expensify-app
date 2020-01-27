@@ -1,4 +1,5 @@
 import moment from "moment";
+
 export default [
 	{
 		id: "1",
@@ -26,3 +27,5 @@ export default [
 			.valueOf()
 	}
 ];
+
+export const totalAmount = 4500 + 19500 + 195;
