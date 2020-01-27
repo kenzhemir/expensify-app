@@ -5,11 +5,13 @@
 	"author": "Miras Kenzhegaliyev",
 	"license": "MIT",
 	"scripts": {
+		"start": "node server/server.js",
 		"serve": "live-server public/",
 		"build:dev": "webpack",
 		"build:prod": "webpack -p --env=production",
 		"dev-server": "webpack-dev-server",
-		"test": "jest --config=jest.config.json"
+		"test": "jest --config=jest.config.json",
+		"heroku-postbuild": "yarn run build:prod"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.8.3",
@@ -31,6 +33,7 @@
 		"enzyme": "^3.11.0",
 		"enzyme-adapter-react-16": "^1.15.2",
 		"enzyme-to-json": "^3.4.3",
+		"express": "^4.17.1",
 		"mini-css-extract-plugin": "^0.9.0",
 		"moment": "^2.24.0",
 		"node-sass": "^4.13.1",
