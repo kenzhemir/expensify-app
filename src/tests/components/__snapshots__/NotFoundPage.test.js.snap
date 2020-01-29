@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render expense list with expenses 1`] = `
+exports[`should render not found page 1`] = `
 <div>
   404 - 
   <Link

@@ -3,7 +3,7 @@ import React from "react";
 
 import NotFoundPage from "../../components/NotFoundPage";
 
-test("should render expense list with expenses", () => {
+test("should render not found page", () => {
 	const wrapper = shallow(<NotFoundPage />);
 	expect(wrapper).toMatchSnapshot();
 });
