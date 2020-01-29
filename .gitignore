@@ -3,3 +3,4 @@ public/dist/
 yarn-error.log
 .env.development
 .env.test
+coverage/
