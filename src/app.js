@@ -11,6 +11,7 @@ import configureStore from "./store/configureStore";
 import "./firebase/firebase";
 
 import "./styles/styles.scss";
+import { startSetExpenses } from "./actions/expenses";
 
 const store = configureStore();
 
@@ -20,4 +21,7 @@ const jsx = (
 	</Provider>
 );
 
-ReactDOM.render(jsx, document.getElementById("app"));
+ReactDOM.render(<p>Loading...</p>, document.getElementById("app"));
+store.dispatch(startSetExpenses()).then(() => {
+	ReactDOM.render(jsx, document.getElementById("app"));
+});
