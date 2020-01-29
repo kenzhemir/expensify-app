@@ -16,7 +16,7 @@ module.exports = env => {
 			new MiniCssExtractPlugin({
 				filename: "styles.css"
 			}),
-			webpack.DefinePlugin({
+			new webpack.DefinePlugin({
 				"process.env.FIREBASE_API_KEY": JSON.stringify(
 					process.env.FIREBASE_API_KEY
 				),
