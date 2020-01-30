@@ -1,3 +1,5 @@
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import "react-dates/initialize";
 import { Provider } from "react-redux";
 import React from "react";
@@ -11,6 +13,7 @@ import { login, logout } from "./actions/auth";
 import { startSetExpenses } from "./actions/expenses";
 import AppRouter, { history } from "./routers/AppRouter";
 import configureStore from "./store/configureStore";
+import LoadingPage from "./components/LoadingPage";
 
 import "./styles/styles.scss";
 
@@ -30,7 +33,7 @@ const renderApp = () => {
 	}
 };
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById("app"));
+ReactDOM.render(<LoadingPage />, document.getElementById("app"));
 
 firebase.auth().onAuthStateChanged(user => {
 	if (user) {

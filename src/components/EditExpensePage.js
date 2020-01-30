@@ -4,6 +4,7 @@ import React from "react";
 import { startEditExpense } from "../actions/expenses";
 import { startRemoveExpense } from "../actions/expenses";
 import ExpenseForm from "./ExpenseForm";
+import SimplePageHeader from "./SimplePageHeader";
 
 export class EditExpensePage extends React.Component {
 	onSubmit = expense => {
@@ -17,8 +18,13 @@ export class EditExpensePage extends React.Component {
 	render() {
 		return (
 			<div>
-				<ExpenseForm expense={this.props.expense} onSubmit={this.onSubmit} />
-				<button onClick={this.onRemove}>Remove</button>
+				<SimplePageHeader title="Edit Expense" />
+				<div className="content-container">
+					<ExpenseForm expense={this.props.expense} onSubmit={this.onSubmit} />
+					<button onClick={this.onRemove} className="button button--secondary">
+						Remove expense
+					</button>
+				</div>
 			</div>
 		);
 	}
