@@ -13,6 +13,7 @@ import {
 import expenses from "../fixtures/expenses";
 import database from "../../firebase/firebase";
 
+jest.setTimeout(15000);
 const createMockStore = configureMockStore([thunk]);
 const uid = "thisistestuid";
 const defaultAuthState = { auth: { uid } };
